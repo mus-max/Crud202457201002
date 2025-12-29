@@ -87,8 +87,10 @@ public class Product extends javax.swing.JFrame {
         comboBoxCategoryProduct = new javax.swing.JComboBox<>();
         tambahProduct = new javax.swing.JButton();
         ubahProduct = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         hapusProduct.setText("Hapus");
         hapusProduct.addActionListener(new java.awt.event.ActionListener() {
@@ -96,6 +98,7 @@ public class Product extends javax.swing.JFrame {
                 hapusProductActionPerformed(evt);
             }
         });
+        getContentPane().add(hapusProduct, new org.netbeans.lib.awtextra.AbsoluteConstraints(457, 12, -1, -1));
 
         resetProduct.setText("Reset");
         resetProduct.addActionListener(new java.awt.event.ActionListener() {
@@ -103,6 +106,7 @@ public class Product extends javax.swing.JFrame {
                 resetProductActionPerformed(evt);
             }
         });
+        getContentPane().add(resetProduct, new org.netbeans.lib.awtextra.AbsoluteConstraints(547, 12, -1, -1));
 
         kembaliProduct.setText("Kembali");
         kembaliProduct.addActionListener(new java.awt.event.ActionListener() {
@@ -110,9 +114,11 @@ public class Product extends javax.swing.JFrame {
                 kembaliProductActionPerformed(evt);
             }
         });
+        getContentPane().add(kembaliProduct, new org.netbeans.lib.awtextra.AbsoluteConstraints(631, 12, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("PRODUCT");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 6, 93, 28));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -132,6 +138,10 @@ public class Product extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(276, 53, 427, 384));
+
+        jPanel1.setBackground(new java.awt.Color(51, 102, 255));
+
         jLabel2.setText("ID");
 
         jLabel3.setText("Name");
@@ -149,6 +159,11 @@ public class Product extends javax.swing.JFrame {
         jLabel6.setText("Price");
 
         comboBoxCategoryProduct.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Active", "Inactive" }));
+        comboBoxCategoryProduct.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboBoxCategoryProductActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -198,12 +213,15 @@ public class Product extends javax.swing.JFrame {
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 53, -1, -1));
+
         tambahProduct.setText("Tambah");
         tambahProduct.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tambahProductActionPerformed(evt);
             }
         });
+        getContentPane().add(tambahProduct, new org.netbeans.lib.awtextra.AbsoluteConstraints(276, 12, -1, -1));
 
         ubahProduct.setText("Ubah");
         ubahProduct.addActionListener(new java.awt.event.ActionListener() {
@@ -211,48 +229,10 @@ public class Product extends javax.swing.JFrame {
                 ubahProductActionPerformed(evt);
             }
         });
+        getContentPane().add(ubahProduct, new org.netbeans.lib.awtextra.AbsoluteConstraints(367, 12, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(43, 43, 43)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(tambahProduct)
-                        .addGap(18, 18, 18)
-                        .addComponent(ubahProduct)
-                        .addGap(18, 18, 18)
-                        .addComponent(hapusProduct)
-                        .addGap(18, 18, 18)
-                        .addComponent(resetProduct)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(kembaliProduct))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addContainerGap(31, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tambahProduct)
-                    .addComponent(ubahProduct)
-                    .addComponent(hapusProduct)
-                    .addComponent(resetProduct)
-                    .addComponent(kembaliProduct))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(41, Short.MAX_VALUE))
-        );
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Rectangle 1 (1).png"))); // NOI18N
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, 0, 730, 480));
 
         pack();
         setLocationRelativeTo(null);
@@ -354,6 +334,10 @@ public class Product extends javax.swing.JFrame {
         }         
     }//GEN-LAST:event_hapusProductActionPerformed
 
+    private void comboBoxCategoryProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxCategoryProductActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboBoxCategoryProductActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -400,6 +384,7 @@ public class Product extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;

@@ -87,8 +87,12 @@ public class user extends javax.swing.JFrame {
         kembaliUser = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         TblUser = new javax.swing.JTable();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setBackground(new java.awt.Color(51, 102, 255));
 
         jLabel2.setText("Username");
 
@@ -162,8 +166,11 @@ public class user extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 53, -1, -1));
+
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("USER");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 6, 93, 28));
 
         tambahUser.setText("Tambah");
         tambahUser.addActionListener(new java.awt.event.ActionListener() {
@@ -171,6 +178,7 @@ public class user extends javax.swing.JFrame {
                 tambahUserActionPerformed(evt);
             }
         });
+        getContentPane().add(tambahUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(276, 12, -1, -1));
 
         ubahUser.setText("Ubah");
         ubahUser.addActionListener(new java.awt.event.ActionListener() {
@@ -178,6 +186,7 @@ public class user extends javax.swing.JFrame {
                 ubahUserActionPerformed(evt);
             }
         });
+        getContentPane().add(ubahUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(367, 12, -1, -1));
 
         hapusUser.setText("Hapus");
         hapusUser.addActionListener(new java.awt.event.ActionListener() {
@@ -185,6 +194,7 @@ public class user extends javax.swing.JFrame {
                 hapusUserActionPerformed(evt);
             }
         });
+        getContentPane().add(hapusUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(457, 12, -1, -1));
 
         resetUser.setText("Reset");
         resetUser.addActionListener(new java.awt.event.ActionListener() {
@@ -192,6 +202,7 @@ public class user extends javax.swing.JFrame {
                 resetUserActionPerformed(evt);
             }
         });
+        getContentPane().add(resetUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(547, 12, -1, -1));
 
         kembaliUser.setText("Kembali");
         kembaliUser.addActionListener(new java.awt.event.ActionListener() {
@@ -199,6 +210,7 @@ public class user extends javax.swing.JFrame {
                 kembaliUserActionPerformed(evt);
             }
         });
+        getContentPane().add(kembaliUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(631, 12, -1, -1));
 
         TblUser.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -218,47 +230,10 @@ public class user extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(TblUser);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(43, 43, 43)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(tambahUser)
-                        .addGap(18, 18, 18)
-                        .addComponent(ubahUser)
-                        .addGap(18, 18, 18)
-                        .addComponent(hapusUser)
-                        .addGap(18, 18, 18)
-                        .addComponent(resetUser)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(kembaliUser))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addContainerGap(31, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tambahUser)
-                    .addComponent(ubahUser)
-                    .addComponent(hapusUser)
-                    .addComponent(resetUser)
-                    .addComponent(kembaliUser))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(41, Short.MAX_VALUE))
-        );
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(276, 53, 427, 384));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Rectangle 1 (1).png"))); // NOI18N
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, 0, 730, 480));
 
         pack();
         setLocationRelativeTo(null);
@@ -412,6 +387,7 @@ public class user extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton kembaliUser;

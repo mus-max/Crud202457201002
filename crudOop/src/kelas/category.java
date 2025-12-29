@@ -44,17 +44,18 @@ public class category extends koneksi{
     }
     
     public void TambahCategory(){
-        query = "INSERT INTO category (categoryName) VALUES (?) ";
+    query = "INSERT INTO category (categoryId, categoryName) VALUES (?, ?) ";
     try {
         ps = koneksi.prepareStatement(query);
-        ps.setString(1, categoryName);
+        ps.setInt(1, categoryId);
+        ps.setString(2, categoryName);
         ps.executeUpdate();
         ps.close();
-
         JOptionPane.showMessageDialog(null,"Data Berhasil Ditambahkan");
     } catch (SQLException e) {
-        JOptionPane.showMessageDialog(null, "Data Gagal Ditambahkan");
-        }
+        e.printStackTrace(); 
+        JOptionPane.showMessageDialog(null, "Gagal: " + e.getMessage());
+    }
     }
     
     public void UbahCategory(){

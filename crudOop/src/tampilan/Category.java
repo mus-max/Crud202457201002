@@ -66,6 +66,7 @@ public class Category extends javax.swing.JFrame {
         resetCategory = new javax.swing.JButton();
         kembaliCategory = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addContainerListener(new java.awt.event.ContainerAdapter() {
@@ -73,6 +74,7 @@ public class Category extends javax.swing.JFrame {
                 formComponentAdded(evt);
             }
         });
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -91,6 +93,10 @@ public class Category extends javax.swing.JFrame {
             }
         });
         jScrollPane1.setViewportView(jTable1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(276, 53, 427, 384));
+
+        jPanel1.setBackground(new java.awt.Color(51, 102, 255));
 
         jLabel2.setText("ID");
 
@@ -132,12 +138,15 @@ public class Category extends javax.swing.JFrame {
                 .addContainerGap(228, Short.MAX_VALUE))
         );
 
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 53, -1, -1));
+
         tambahCategory.setText("Tambah");
         tambahCategory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tambahCategoryActionPerformed(evt);
             }
         });
+        getContentPane().add(tambahCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(276, 12, -1, -1));
 
         ubahCategory.setText("Ubah");
         ubahCategory.addActionListener(new java.awt.event.ActionListener() {
@@ -145,6 +154,7 @@ public class Category extends javax.swing.JFrame {
                 ubahCategoryActionPerformed(evt);
             }
         });
+        getContentPane().add(ubahCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(367, 12, -1, -1));
 
         hapusCategory.setText("Hapus");
         hapusCategory.addActionListener(new java.awt.event.ActionListener() {
@@ -152,6 +162,7 @@ public class Category extends javax.swing.JFrame {
                 hapusCategoryActionPerformed(evt);
             }
         });
+        getContentPane().add(hapusCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(457, 12, -1, -1));
 
         resetCategory.setText("Reset");
         resetCategory.addActionListener(new java.awt.event.ActionListener() {
@@ -159,6 +170,7 @@ public class Category extends javax.swing.JFrame {
                 resetCategoryActionPerformed(evt);
             }
         });
+        getContentPane().add(resetCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(547, 12, -1, -1));
 
         kembaliCategory.setText("Kembali");
         kembaliCategory.addActionListener(new java.awt.event.ActionListener() {
@@ -166,51 +178,15 @@ public class Category extends javax.swing.JFrame {
                 kembaliCategoryActionPerformed(evt);
             }
         });
+        getContentPane().add(kembaliCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(631, 12, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("CATEGORY");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 6, -1, 28));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(43, 43, 43)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(tambahCategory)
-                        .addGap(18, 18, 18)
-                        .addComponent(ubahCategory)
-                        .addGap(18, 18, 18)
-                        .addComponent(hapusCategory)
-                        .addGap(18, 18, 18)
-                        .addComponent(resetCategory)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(kembaliCategory))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addContainerGap(31, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tambahCategory)
-                    .addComponent(ubahCategory)
-                    .addComponent(hapusCategory)
-                    .addComponent(resetCategory)
-                    .addComponent(kembaliCategory))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(41, Short.MAX_VALUE))
-        );
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Rectangle 1 (1).png"))); // NOI18N
+        jLabel4.setText("jLabel4");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 480));
 
         pack();
         setLocationRelativeTo(null);
@@ -322,6 +298,7 @@ public class Category extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
