@@ -114,8 +114,6 @@ public class login extends javax.swing.JFrame {
         String password = new String(jPassword.getPassword());
         usr.setUserPassword(password);
         usr.login();
-
-        // PERBAIKAN: Gunakan .equals() untuk membandingkan String, bukan ==
         if ("aktif".equals(Sesion.getStatus())) {
             JOptionPane.showMessageDialog(this, "Login Berhasil! Selamat Datang " + Sesion.getUsername());
             this.dispose();

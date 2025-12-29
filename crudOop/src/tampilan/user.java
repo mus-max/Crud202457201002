@@ -359,7 +359,7 @@ public class user extends javax.swing.JFrame {
             } else { 
                 comboBoxStatusUser.setSelectedItem("Inactive"); 
             } 
-            fieldUsenameUser.setEditable(false); // Username tidak boleh diganti saat edit
+            fieldUsenameUser.setEditable(false);
         }
     }//GEN-LAST:event_TblUserMouseClicked
 

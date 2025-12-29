@@ -277,7 +277,7 @@ public class Product extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             kelas.product prd = new kelas.product(); 
-            prd.setProductName(nameProduct.getText()); // Gunakan nameProduct bukan txtName
+            prd.setProductName(nameProduct.getText()); 
             prd.setProductDescription(descriptionProduct.getText()); 
             prd.setProductPrice(Integer.parseInt(priceProduct.getText())); 
             

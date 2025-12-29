@@ -30,8 +30,7 @@ public class Category extends javax.swing.JFrame {
         DefaultTableModel model = new DefaultTableModel(); 
         model.addColumn("ID"); 
         model.addColumn("Name"); 
-        try { 
-            // Menggunakan class category dari package 'kelas'
+        try {
             kelas.category ctg = new kelas.category(); 
             ResultSet result = ctg.TampilCategory(); 
             while (result.next()){ 
